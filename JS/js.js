@@ -85,3 +85,30 @@
 
 //   return result;
 // }
+
+
+
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+// ***********
+
+
+// const lines = 5;
+// let result = '';
+
+// for (let i = 0; i <= 6; i++) {
+
+//   for (let j = lines; j >= i; j-- ) {
+//     result += ' ';
+//   }
+  
+//   for (let k = 0; k <= i; k++) {
+//     result += '*';
+//   }
+//   result += '\n';
+// }
+
+// console.log(result);
