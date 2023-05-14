@@ -493,16 +493,3 @@ console.log(findMaxNumber(1, 'ff', 3, 4) );
 
 
 
-function fib(inputValue) {
-    let result = '';
-    let = 0;
-
-
-    for (let i = 0; i < inputValue; i++) {
-        fibNum = 0 + i
-    }
-
-    return result;
-}
-
-console.log(fib(4) )
