@@ -318,3 +318,191 @@
 // console.log(parseInt(test) );
 // console.log(parseFloat(test) );
 
+
+
+
+
+
+
+// Создайте функцию, которая будет вычислять объем и 
+// площадь полной поверхности куба 
+// (тоже базовая математика, иногда используется в создании анимаций). 
+// Эта функция принимает в себя целое число со значением длины ребра куба.
+//  Ответ выведите в формате строки, который изображен в примерах.
+
+// Если в функцию попал неправильный аргумент или 
+// вычислить значения невозможно - 
+// вернуть строку "При вычислении произошла ошибка"
+
+// Примеры:
+
+// calculateVolumeAndArea(5)  => 'Объем куба: 125, площадь всей поверхности: 150'
+
+// calculateVolumeAndArea(15)  => 'Объем куба: 3375, площадь всей поверхности: 1350'
+
+// calculateVolumeAndArea(15.5)  => 'При вычислении произошла ошибка'
+
+// calculateVolumeAndArea('15')  => 'При вычислении произошла ошибка'
+
+// calculateVolumeAndArea(-15)  => 'При вычислении произошла ошибка'
+
+function calculateVolumeAndArea(value) {
+    let v = value,
+        s = 6,
+        result;
+
+        if (Number.isInteger(value) != true || typeof(value) !== 'number' || Math.sign(value) === -1) {
+            return 'При вычислении произошла ошибка';
+        } else {
+            return result = `Объем куба: ${v * v * v}, площадь всей поверхности: ${s * (v * v)}`
+        }
+
+
+}
+
+console.log(calculateVolumeAndArea(5) );
+
+
+
+
+
+// 2) Постепенно переходим к более реалистичным задачам :) Вы обнаружите, что там используется все тоже самое.
+
+// Напишите функцию, которая будет определять номер купе по переданному ей номеру места. Наглядно:
+
+
+// Функция принимает только целое число от 1 до 36.
+
+// Если переданный аргумент не число, отрицательное или дробное - возвращается сообщение:
+
+// "Ошибка. Проверьте правильность введенного номера места"
+
+// Если число 0 или больше 36, то сообщение: "Таких мест в вагоне не существует"
+
+// Пример:
+
+// getCoupeNumber(33)  => 9
+
+// getCoupeNumber(7)  => 2
+
+// getCoupeNumber(300)  => "Таких мест в вагоне не существует"
+
+// getCoupeNumber(0)  => "Таких мест в вагоне не существует"
+
+// getCoupeNumber(7.7)  => "Ошибка. Проверьте правильность введенного номера места"
+
+// getCoupeNumber(-10)  => "Ошибка. Проверьте правильность введенного номера места"
+
+// getCoupeNumber('Hello')  => "Ошибка. Проверьте правильность введенного номера места"
+
+// Такая функция вполне реальна и может использоваться для формирования билетов, в том числе и визуально на сайтах. Конечно, там будет куда больше условий,
+//  но смысл остается таким же.
+
+
+
+function getCoupeNumber(value) {
+    let result;
+    
+    if (Number.isInteger(value) != true || typeof (value) !== 'number' || Math.sign(value) === -1 ) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+       } else if (value === 0 || value > 36) {
+            return "Таких мест в вагоне не существует";
+    }
+
+   if (value > 0 && value <=4) {
+     return result = 1;
+   } else if (value > 4 && value <= 8) {
+    return result = 2;
+   } else if (value > 8 && value <= 12) {
+    return result = 3;
+   } else if (value > 12 && value <= 16) {
+    return result = 4;
+   } else if (value > 16 && value <= 20) {
+    return result = 5;
+   } else if (value > 20 && value <= 24) {
+    return result = 6;
+   } else if (value > 24 && value <= 28) {
+    return result = 7;
+   } else if (value > 28 && value <= 32) {
+    return result = 8;
+   } else if (value > 32 && value <= 36) {
+    return result = 9;
+   }
+
+   
+}
+
+
+
+console.log(getCoupeNumber(44) );
+
+
+// {
+//     let value = 1;
+//     if (Number.isInteger(value) != true) {
+//         return console.log('HAHAHAH');
+//     }
+// }
+
+
+
+
+function getTimeFromMinutes(minutesTotal) {
+    if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal) ) {
+        return "Ошибка, проверьте данные";
+    }
+
+
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+
+    let hourString = '';
+
+    switch (hours) {
+        case 0: 
+            hourString = 'часов';
+            break;
+        case 1: 
+            hourString = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hourString = 'часа';
+            break;
+        default: 
+            hourString = 'часов';   
+    }
+
+    return `Это ${hours} ${hourString} и ${minutes} минут`
+}
+
+console.log(getTimeFromMinutes(20) );
+
+
+function findMaxNumber(a, b, c, d) {
+    if (typeof a  !== 'number' || typeof b  !== 'number' || typeof c  !== 'number' || typeof d !== 'number') {
+        return 0
+    }
+
+    return Math.max(a, b, c, d)
+}
+
+console.log(findMaxNumber(1, 'ff', 3, 4) );
+
+
+
+
+function fib(inputValue) {
+    let result = '';
+    let = 0;
+
+
+    for (let i = 0; i < inputValue; i++) {
+        fibNum = 0 + i
+    }
+
+    return result;
+}
+
+console.log(fib(4) )
