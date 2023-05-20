@@ -518,3 +518,104 @@
 // }
 
 // learnJS('JavaScript', done);
+
+
+
+
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         background: 'red'
+//     },
+//     makeTest: function() {
+//         console.log('Test')
+//     }
+// };
+
+// options.makeTest();
+
+// const {border, background} = options.colors;
+
+// console.log(border);
+
+
+
+// // console.log(Object.keys(options).length );
+
+// // console.log(options.name);
+
+// // delete options.name;
+// // console.log(options);
+
+
+
+// // let counter = 0;
+
+// // for (let key in options) {
+// //     if (typeof(options[key]) === 'object') {
+// //         for (let i in options[key]) {
+// //             console.log(`Value  ${i} have  znchenie ${options[key][i]}`)
+// //         }
+// //     } else {
+// //         console.log(`Value  ${key} have  znchenie ${options[key]}`)
+// //         counter++
+// //     }
+    
+// // }
+
+// // console.log(counter);
+
+
+// let someObj = {
+//     kids: 2,
+//     animals: 3,
+//     food: {
+//         apple: 3,
+//         lemon: 2,
+//     }
+// }
+
+
+// for (key in someObj) {
+//     console.log(someObj[key]);
+// }
+
+
+const arr = [1, 15, 3, 6, 18];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b) {
+    return a - b;
+}
+// arr.forEach(function(item, index, arr) {
+//     console.log(`${index}: ${item} внутри масива ${arr}`)
+// });
+
+// arr[99] = 0;
+// console.log(arr.length)
+// console.log(arr)
+
+
+// arr.pop()
+// arr.push('ffr')
+
+// console.log(arr)
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value)
+// }
+
+
+// const str = prompt('', '');
+// const products = str.split(', ');
+// products.sort();
+// console.log(products.join('; '));
