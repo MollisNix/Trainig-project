@@ -709,9 +709,194 @@
 // const q = {
 //     one: 1,
 //     two: 2
+// // };
+
+// // const newObj = {...q};
+
+// // console.log(newObj);
+
+// // const personalPlanPeter = {
+// //     name: "Peter",
+// //     age: "29",
+// //     skills: {
+// //         languages: ['ru', 'eng'],
+// //         programmingLangs: {
+// //             js: '20%',
+// //             php: '10%'
+// //         },
+// //         exp: '1 month'
+// //     }
+// // };
+
+
+
+// function showExperience(plan) {
+//     let {skills: {exp}} = plan;
+
+//     return exp
+// }
+
+// // showExperience(personalPlanPeter);
+
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%',
+//             R: '300%'
+//         },
+//         exp: '1 month'
+//     },
+
+//     showAgeAndLangs: (plan) => { 
+//         let string = ``;
+//         const getObj = {};
+        
+//         for (let key in plan) {
+//             if (typeof (plan[key] ) === 'object') {
+//                 for (let i in plan[key]) {
+//                     if ( typeof (plan[key][i] ) === 'object' ) {
+// //                         for (let j in plan[key][i] ) {
+// //                            getObj[i] = plan[key][i] 
+// //                         }
+// //                     }
+// //                 }
+// //             }
+// //         }
+
+      
+
+// //         string = `Мне ${plan.age} и я владею языками ${getObj.languages.join(' ').toUpperCase()} `
+// //         return string
+// //     }
+// // };
+ 
+
+// // console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter) )
+// // // Мне 29 и я владею языками: RU ENG'
+
+
+// // function showProgrammingLangs(plan) {
+// //     let result = ``;
+// //     const getObj = {};
+
+// //     for (let key in plan) {
+// //         if (typeof(plan[key]) === 'object') {
+// //             for (let i in plan[key] ) {
+// //                 if (typeof(plan[key][i]) === 'object') {
+// //                     for (let j in plan[key][i]) {
+// //                         getObj[i] = plan[key][i]
+// //                     }
+// //                 }
+// //             }
+// //         }
+// //     }
+ 
+// //     if (getObj.programmingLangs === undefined) {
+// //         return result;
+// //     } else {
+// //         for (let [key, value] of Object.entries(getObj.programmingLangs) ) {
+// //            result += `Язык ${key} изучен на ${value} \n`
+// //         }
+// //     }
+
+// //    return result
+// // }
+
+// // console.log(showProgrammingLangs(personalPlanPeter) )
+
+// // const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+// // const brrh = [];
+// // function showFamily(arr) {
+// //     let result = ``;
+// //     if (arr.length == []) {
+// //         return result = `Семья пуста`;
+// //     } else {
+// //         result = `Семья состоит из: ${arr.join(' ')}`
+// //     }
+// //     return result
+// // }
+
+
+// // showFamily(brrh);
+
+
+// // const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// // function standardizeStrings(arr) {
+// //     return arr.join('\n').toLowerCase();
+// // }
+
+// // standardizeStrings(favoriteCities);
+
+
+
+// // const someString = 'This is some strange string';
+
+// // function reverse(str) {
+// //     if(typeof (str) !== 'string') {
+// //         return `Ошибка`
+// //     } else {
+// //         return str.split('').reverse().join('');
+// //     }
+// // }
+
+// // reverse(someString);
+
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const arrf = [];
+
+
+// function availableCurr(arr, missingCurr) {
+//     let str = ``;
+
+//     arr.length === 0 ? str = `Нет доступных валют` : str = `Доступные валюты:\n`;
+
+//     arr.forEach((curr, i) => {
+//         if (curr !== missingCurr) {
+//             str += `${curr} \n`
+//         }
+//     });
+//     return str;
+//   }
+
+// console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'RUB') );
+
+let str = 'some';
+let  strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj) );
+
+console.dir([1, 2, 3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log('Hello');
+    }
+};
+
+// const john = {
+//     health: 100,
+
 // };
 
-// const newObj = {...q};
+const john = Object.create(soldier);
 
-// console.log(newObj);
+// john.__proto__ = soldier;
+
+// Object.setPrototypeOf(john, soldier);
+
+// console.log(john.armor);
+john.sayHello();
+
 
